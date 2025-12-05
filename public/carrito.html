@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras - La Desesperanza</title>
+  <meta name="description" content="Tu carrito de compras">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-internal">
+  <!-- header -bynd -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">LD</div>
+        <span class="logo-text">La Desesperanza</span>
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="productos.html" class="nav-link">Productos</a>
+        <a href="carrito.html" class="nav-link active">Carrito</a>
+        <a href="admin.html" class="nav-link" id="adminLink" style="display: none;">Panel Admin</a>
+      </nav>
+      
+      <div class="header-actions">
+        <a href="carrito.html" class="cart-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+        <a href="login.html" class="user-btn" id="userBtn">Iniciar Sesion</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html" class="nav-link">Inicio</a>
+      <a href="productos.html" class="nav-link">Productos</a>
+      <a href="carrito.html" class="nav-link active">Carrito</a>
+      <a href="login.html" class="nav-link">Iniciar Sesion</a>
+    </div>
+  </header>
+
+  <main class="cart-page">
+    <div class="cart-container">
+      <div class="catalog-header">
+        <h1>Tu Carrito</h1>
+        <p>Revisa los productos antes de finalizar tu compra</p>
+      </div>
+      
+      <div id="cartContent">
+        <!-- contenido se carga con js -bynd -->
+      </div>
+    </div>
+  </main>
+
+  <!-- toast notification -bynd -->
+  <div class="toast hidden" id="toast">
+    <span>OK</span>
+    <span id="toastMessage">Producto eliminado del carrito</span>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="carrito.js"></script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Desesperanza - Panaderia Artesanal</title>
+  <meta name="description" content="Panaderia artesanal con productos tematicos de Navidad">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-internal">
+  <!-- header -bynd -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">LD</div>
+        <span class="logo-text">La Desesperanza</span>
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active">Inicio</a>
+        <a href="productos.html" class="nav-link">Productos</a>
+        <a href="carrito.html" class="nav-link">Carrito</a>
+        <a href="admin.html" class="nav-link" id="adminLink" style="display: none;">Panel Admin</a>
+      </nav>
+      
+      <div class="header-actions">
+        <a href="carrito.html" class="cart-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+        <a href="login.html" class="user-btn" id="userBtn">Iniciar Sesion</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- menu movil -bynd -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html" class="nav-link active">Inicio</a>
+      <a href="productos.html" class="nav-link">Productos</a>
+      <a href="carrito.html" class="nav-link">Carrito</a>
+      <a href="login.html" class="nav-link">Iniciar Sesion</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- hero section -bynd -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            Temporada Navidena - Edicion Especial
+          </div>
+          
+          <h1>Dulces Tradiciones para Momentos Especiales</h1>
+          
+          <p class="hero-description">
+            Descubre nuestra coleccion artesanal de panes y postres navidenos, perfectos para celebrar las fiestas con el sabor de siempre y la calidez del hogar.
+          </p>
+          
+          <div class="hero-buttons">
+            <a href="productos.html" class="btn-primary">
+              Ver Productos
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#destacados" class="btn-secondary">
+              Destacados
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </a>
+          </div>
+          
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h3>15+</h3>
+              <p>Anos de experiencia</p>
+            </div>
+            <div class="stat-item">
+              <h3>50+</h3>
+              <p>Productos artesanales</p>
+            </div>
+            <div class="stat-item">
+              <h3>1000+</h3>
+              <p>Clientes felices</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-image">
+          <img src="resources/hero-panaderia.png" alt="Pan de muerto tradicional">
+          <div class="hero-rating">
+            <span class="stars">* * * * *</span>
+            <div>
+              <span class="rating-value">4.9</span>
+              <p class="rating-count">500+ resenas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- productos destacados -bynd -->
+    <section class="featured-products" id="destacados">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-badge">
+            Productos Destacados
+          </div>
+          <h2>Nuestras Especialidades de Temporada</h2>
+          <p>Descubre nuestras creaciones mas populares, perfectas para celebrar la Navidad y las fiestas de fin de ano</p>
+        </div>
+        
+        <div class="products-grid" id="featuredProductsGrid">
+          <!-- productos se cargan con js -bynd -->
+        </div>
+      </div>
+    </section>
+
+    <!-- historia de la panaderia -bynd -->
+    <section class="bakery-story">
+      <div class="section-container">
+        <div class="story-container">
+          <div class="story-image">
+            <img src="resources/panaderia-historia.png" alt="Nuestra panaderia">
+          </div>
+          <div class="story-content">
+            <div class="section-badge">
+              Nuestra Historia
+            </div>
+            <h2>Una Tradicion Familiar desde 2009</h2>
+            <p>
+              La Desesperanza nacio del sueno de una familia apasionada por la reposteria tradicional mexicana. 
+              Lo que comenzo como un pequeno negocio familiar, hoy se ha convertido en un referente de la 
+              panaderia artesanal en la ciudad.
+            </p>
+            <p>
+              Cada uno de nuestros productos esta elaborado con ingredientes de la mas alta calidad, 
+              siguiendo recetas tradicionales que han pasado de generacion en generacion, 
+              adaptadas a los sabores contemporaneos sin perder su esencia.
+            </p>
+            <a href="productos.html" class="btn-primary" style="margin-top: 1rem;">
+              Conoce Nuestros Productos
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- testimonios -bynd -->
+    <section class="testimonials">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-badge">
+            Testimonios
+          </div>
+          <h2>Lo Que Dicen Nuestros Clientes</h2>
+          <p>La satisfaccion de nuestros clientes es nuestro mayor orgullo</p>
+        </div>
+        
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">* * * * *</div>
+            <p class="testimonial-text">
+              "El mejor panettone que he probado. La textura es perfecta y el sabor 
+              es increible. Ya es tradicion comprarlo aqui cada Navidad."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">MG</div>
+              <div class="author-info">
+                <h4>Maria Gonzalez</h4>
+                <p>Cliente frecuente</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-stars">* * * * *</div>
+            <p class="testimonial-text">
+              "Los pasteles navidenos son una obra de arte. Pedi el buche de Navidad y quede 
+              encantada. El sabor y la presentacion superaron mis expectativas."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">CR</div>
+              <div class="author-info">
+                <h4>Carlos Ramirez</h4>
+                <p>Cliente desde 2020</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-stars">* * * * *</div>
+            <p class="testimonial-text">
+              "La atencion al cliente es excelente y los productos siempre frescos. 
+              Las galletas de jengibre son las favoritas de mis hijos."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AM</div>
+              <div class="author-info">
+                <h4>Ana Martinez</h4>
+                <p>Cliente verificado</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- trust signals -bynd -->
+    <section class="trust-signals">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          </div>
+          <h4>Envio Rapido</h4>
+          <p>Entrega el mismo dia en pedidos antes de las 2pm</p>
+        </div>
+        
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h4>Ingredientes Naturales</h4>
+          <p>Sin conservadores artificiales ni quimicos</p>
+        </div>
+        
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+          <h4>Hecho Artesanalmente</h4>
+          <p>Cada producto elaborado con amor y dedicacion</p>
+        </div>
+        
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <h4>Satisfaccion Garantizada</h4>
+          <p>Si no estas satisfecho, te devolvemos tu dinero</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- call to action -bynd -->
+    <section class="cta">
+      <div class="cta-container">
+        <h2>Listo para Probar Nuestras Delicias?</h2>
+        <p>Haz tu pedido ahora y recibe un 10% de descuento en tu primera compra usando el codigo: BIENVENIDO10</p>
+        <a href="productos.html" class="btn-primary">
+          Explorar Catalogo
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -bynd -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo-text">La Desesperanza</div>
+        <p>Panaderia artesanal con mas de 15 anos de tradicion, llevando sabor y alegria a tu mesa.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Enlaces</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="carrito.html">Carrito</a></li>
+          <li><a href="login.html">Mi Cuenta</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Categorias</h4>
+        <ul>
+          <li><a href="productos.html?cat=panes">Panes</a></li>
+          <li><a href="productos.html?cat=pasteles">Pasteles</a></li>
+          <li><a href="productos.html?cat=galletas">Galletas</a></li>
+          <li><a href="productos.html?cat=postres">Postres</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="tel:+525512345678">+52 55 1234 5678</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#3c5453505d7c505d58594f594f4c594e5d52465d125f5351"><span class="__cf_email__" data-cfemail="0d6562616c4d616c69687e687e7d687f6c63776c236e6260">[email&#160;protected]</span></a></li>
+          <li><a href="#">Ciudad de Mexico</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>2025 La Desesperanza. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- toast notification -bynd -->
+  <div class="toast hidden" id="toast">

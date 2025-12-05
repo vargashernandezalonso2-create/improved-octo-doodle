@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesion - La Desesperanza</title>
+  <meta name="description" content="Inicia sesion en tu cuenta">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-internal">
+  <!-- header -bynd -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">LD</div>
+        <span class="logo-text">La Desesperanza</span>
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="productos.html" class="nav-link">Productos</a>
+        <a href="carrito.html" class="nav-link">Carrito</a>
+        <a href="admin.html" class="nav-link" id="adminLink" style="display: none;">Panel Admin</a>
+      </nav>
+      
+      <div class="header-actions">
+        <a href="carrito.html" class="cart-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+        <a href="login.html" class="user-btn" id="userBtn">Iniciar Sesion</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html" class="nav-link">Inicio</a>
+      <a href="productos.html" class="nav-link">Productos</a>
+      <a href="carrito.html" class="nav-link">Carrito</a>
+      <a href="login.html" class="nav-link">Iniciar Sesion</a>
+    </div>
+  </header>
+
+  <main class="login-page">
+    <div class="login-container">
+      <div class="login-card">
+        <div class="login-header">
+          <h1>Bienvenido</h1>
+          <p>Inicia sesion para continuar</p>
+        </div>
+        
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="email">Correo electronico</label>
+            <input type="email" id="email" name="email" required placeholder="tu@correo.com">
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Contrasena</label>
+            <input type="password" id="password" name="password" required placeholder="********">
+          </div>
+          
+          <div id="errorMessage" style="color: var(--color-error); font-size: 0.875rem; margin-bottom: 1rem; display: none;"></div>
+          
+          <button type="submit" class="login-btn">Iniciar Sesion</button>
+        </form>
+        
+        <div class="login-footer">
+          <p>No tienes cuenta? <a href="#" id="showRegisterBtn">Registrate aqui</a></p>
+        </div>
+        
+        <div class="login-benefits">
+          <h3>Beneficios de tu cuenta</h3>
+          <ul>
+            <li>Historial de pedidos completo</li>
+            <li>Seguimiento de entregas en tiempo real</li>
+            <li>Ofertas exclusivas para miembros</li>
+            <li>Proceso de compra mas rapido</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- formulario de registro (oculto por defecto) -bynd -->
+      <div class="login-card" id="registerCard" style="display: none;">
+        <div class="login-header">
+          <h1>Crear Cuenta</h1>
+          <p>Unete a nuestra comunidad</p>
+        </div>
+        
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="regNombre">Nombre completo</label>
+            <input type="text" id="regNombre" name="nombre" required placeholder="Tu nombre">
+          </div>
+          
+          <div class="form-group">
+            <label for="regEmail">Correo electronico</label>
+            <input type="email" id="regEmail" name="email" required placeholder="tu@correo.com">
+          </div>
+          
+          <div class="form-group">
+            <label for="regPassword">Contrasena</label>
+            <input type="password" id="regPassword" name="password" required placeholder="Minimo 6 caracteres" minlength="6">
+          </div>
+          
+          <div id="regErrorMessage" style="color: var(--color-error); font-size: 0.875rem; margin-bottom: 1rem; display: none;"></div>
+          
+          <button type="submit" class="login-btn">Crear Cuenta</button>
+        </form>
+        
+        <div class="login-footer">
+          <p>Ya tienes cuenta? <a href="#" id="showLoginBtn">Inicia sesion aqui</a></p>
+        </div>
+      </div>
+      
+      <!-- info de prueba -bynd -->
+      <div style="margin-top: 1.5rem; padding: 1rem; background: var(--color-card); border-radius: var(--radius-lg); border: 1px solid var(--color-border); font-size: 0.875rem;">
+        <strong>Cuentas de prueba:</strong>
+        <p style="margin-top: 0.5rem; color: var(--color-muted);">
+          Admin: admin@ladesesperanza.com / admin123<br>
+          Cliente: cliente@test.com / cliente123
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- toast notification -bynd -->
+  <div class="toast hidden" id="toast">
+    <span>OK</span>
+    <span id="toastMessage">Sesion iniciada correctamente</span>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>
