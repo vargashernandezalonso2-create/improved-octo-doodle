@@ -1,29 +1,39 @@
+/* ===================================
+   estilos principales panaderia la desesperanza -bynd
+   tema navidad
+   =================================== */
+
+/* variables css - tema navidad -bynd */
 :root {
-  --color-primary: #4A4A4A;
-  --color-primary-dark: #2D2D2D;
-  --color-primary-light: #7A7A7A;
-  --color-secondary: #5A5A5A;
-  --color-secondary-dark: #3A3A3A;
-  --color-accent: #6A6A6A;
-  --color-background: #F9F9F9;
+  /* colores navidad -bynd */
+  --color-primary: #C41E3A;
+  --color-primary-dark: #8B0000;
+  --color-primary-light: #FF6B6B;
+  --color-secondary: #228B22;
+  --color-secondary-dark: #006400;
+  --color-accent: #FFD700;
+  --color-background: #FFF9F9;
   --color-card: #FFFFFF;
   --color-foreground: #2D2D2D;
   --color-muted: #6B7280;
-  --color-border: #E5E5E5;
-  --color-success: #5A5A5A;
-  --color-warning: #6A6A6A;
-  --color-error: #4A4A4A;
+  --color-border: #E8D4D4;
+  --color-success: #228B22;
+  --color-warning: #FFD700;
+  --color-error: #C41E3A;
   
-  --shadow-sm: 0 1px 2px rgba(74, 74, 74, 0.05);
-  --shadow-md: 0 4px 6px rgba(74, 74, 74, 0.1);
-  --shadow-lg: 0 10px 15px rgba(74, 74, 74, 0.15);
+  /* sombras -bynd */
+  --shadow-sm: 0 1px 2px rgba(196, 30, 58, 0.05);
+  --shadow-md: 0 4px 6px rgba(196, 30, 58, 0.1);
+  --shadow-lg: 0 10px 15px rgba(196, 30, 58, 0.15);
   
+  /* bordes -bynd */
   --radius-sm: 0.375rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
   --radius-xl: 1rem;
 }
 
+/* reset basico -bynd */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -37,6 +47,7 @@ body {
   line-height: 1.6;
 }
 
+/* tipografia -bynd */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Georgia', serif;
   font-weight: 700;
@@ -53,6 +64,9 @@ a {
   text-decoration: none;
 }
 
+/* ===================================
+   HEADER -bynd
+   =================================== */
 .header {
   position: fixed;
   top: 0;
@@ -117,12 +131,12 @@ a {
 }
 
 .nav-link:hover {
-  background: rgba(74, 74, 74, 0.05);
+  background: rgba(196, 30, 58, 0.05);
   color: var(--color-foreground);
 }
 
 .nav-link.active {
-  background: rgba(74, 74, 74, 0.1);
+  background: rgba(196, 30, 58, 0.1);
   color: var(--color-primary);
 }
 
@@ -173,7 +187,7 @@ a {
 
 .user-btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(74, 74, 74, 0.3);
+  box-shadow: 0 4px 12px rgba(196, 30, 58, 0.3);
 }
 
 .mobile-menu-btn {
@@ -186,13 +200,17 @@ a {
   color: var(--color-foreground);
 }
 
+/* ===================================
+   HERO SECTION (NAVIDAD) -bynd
+   =================================== */
 .hero {
   padding: 6rem 1.5rem 4rem;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #F9F9F9 0%, #F0F0F0 50%, #F5F5F5 100%);
+  background: linear-gradient(135deg, #FFF9F9 0%, #FFE8E8 50%, #E8F5E8 100%);
 }
 
+/* decoraciones navidad -bynd */
 .hero::before {
   content: '';
   position: absolute;
@@ -200,7 +218,7 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='2' fill='%234A4A4A' opacity='0.1'/%3E%3C/svg%3E") repeat;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='2' fill='%23C41E3A' opacity='0.1'/%3E%3C/svg%3E") repeat;
   background-size: 40px 40px;
   pointer-events: none;
 }
@@ -212,7 +230,7 @@ a {
   right: 5%;
   width: 150px;
   height: 150px;
-  background: radial-gradient(circle, rgba(74, 74, 74, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(196, 30, 58, 0.1) 0%, transparent 70%);
   border-radius: 50%;
   animation: twinkle 4s ease-in-out infinite;
 }
@@ -248,9 +266,9 @@ a {
   font-size: 0.875rem;
   font-weight: 500;
   width: fit-content;
-  background: linear-gradient(135deg, rgba(74, 74, 74, 0.15) 0%, rgba(90, 90, 90, 0.15) 100%);
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.15) 0%, rgba(34, 139, 34, 0.15) 100%);
   color: var(--color-primary);
-  border: 1px solid rgba(74, 74, 74, 0.2);
+  border: 1px solid rgba(196, 30, 58, 0.2);
 }
 
 .hero h1 {
@@ -287,12 +305,12 @@ a {
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s;
-  box-shadow: 0 4px 15px rgba(74, 74, 74, 0.3);
+  box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(74, 74, 74, 0.4);
+  box-shadow: 0 6px 20px rgba(196, 30, 58, 0.4);
 }
 
 .btn-secondary {
@@ -342,10 +360,10 @@ a {
 .hero-image img {
   width: 100%;
   border-radius: var(--radius-xl);
-  box-shadow: 0 10px 40px rgba(74, 74, 74, 0.2);
+  box-shadow: 0 10px 40px rgba(196, 30, 58, 0.2);
   object-fit: cover;
   aspect-ratio: 4/5;
-  border: 3px solid rgba(74, 74, 74, 0.1);
+  border: 3px solid rgba(196, 30, 58, 0.1);
 }
 
 .hero-rating {
@@ -360,7 +378,7 @@ a {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  border: 1px solid rgba(74, 74, 74, 0.1);
+  border: 1px solid rgba(196, 30, 58, 0.1);
 }
 
 .hero-rating .stars {
@@ -377,6 +395,9 @@ a {
   color: var(--color-muted);
 }
 
+/* ===================================
+   PRODUCTOS DESTACADOS -bynd
+   =================================== */
 .featured-products {
   padding: 4rem 1.5rem;
   background: var(--color-background);
@@ -402,7 +423,7 @@ a {
   font-size: 0.875rem;
   font-weight: 500;
   margin-bottom: 1rem;
-  background: rgba(74, 74, 74, 0.1);
+  background: rgba(196, 30, 58, 0.1);
   color: var(--color-primary);
 }
 
@@ -422,6 +443,9 @@ a {
   gap: 1.5rem;
 }
 
+/* ===================================
+   PRODUCT CARD -bynd
+   =================================== */
 .product-card {
   background: var(--color-card);
   border-radius: var(--radius-xl);
@@ -431,16 +455,16 @@ a {
 }
 
 .product-card:hover {
-  box-shadow: 0 10px 30px rgba(74, 74, 74, 0.15);
+  box-shadow: 0 10px 30px rgba(196, 30, 58, 0.15);
   transform: translateY(-4px);
-  border-color: rgba(74, 74, 74, 0.2);
+  border-color: rgba(196, 30, 58, 0.2);
 }
 
 .product-image {
   position: relative;
   aspect-ratio: 1;
   overflow: hidden;
-  background: linear-gradient(135deg, #F9F9F9, #F5F5F5);
+  background: linear-gradient(135deg, #FFF9F9, #F5F5F5);
 }
 
 .product-image img {
@@ -561,9 +585,12 @@ a {
 
 .add-to-cart-btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(74, 74, 74, 0.3);
+  box-shadow: 0 4px 12px rgba(196, 30, 58, 0.3);
 }
 
+/* ===================================
+   BAKERY STORY -bynd
+   =================================== */
 .bakery-story {
   padding: 4rem 1.5rem;
   background: var(--color-card);
@@ -595,6 +622,9 @@ a {
   font-size: 1.0625rem;
 }
 
+/* ===================================
+   TESTIMONIALS -bynd
+   =================================== */
 .testimonials {
   padding: 4rem 1.5rem;
   background: var(--color-background);
@@ -654,6 +684,9 @@ a {
   color: var(--color-muted);
 }
 
+/* ===================================
+   TRUST SIGNALS -bynd
+   =================================== */
 .trust-signals {
   padding: 3rem 1.5rem;
   background: var(--color-card);
@@ -680,7 +713,7 @@ a {
 .trust-icon {
   width: 48px;
   height: 48px;
-  background: linear-gradient(135deg, rgba(74, 74, 74, 0.1) 0%, rgba(90, 90, 90, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.1) 0%, rgba(34, 139, 34, 0.1) 100%);
   border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
@@ -699,6 +732,9 @@ a {
   font-size: 0.875rem;
 }
 
+/* ===================================
+   CTA SECTION -bynd
+   =================================== */
 .cta {
   padding: 4rem 1.5rem;
   text-align: center;
@@ -715,7 +751,7 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='1' fill='%236A6A6A' opacity='0.3'/%3E%3C/svg%3E") repeat;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='1' fill='%23FFD700' opacity='0.3'/%3E%3C/svg%3E") repeat;
   background-size: 30px 30px;
   pointer-events: none;
 }
@@ -749,8 +785,11 @@ a {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* ===================================
+   FOOTER -bynd
+   =================================== */
 .footer {
-  background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%);
+  background: linear-gradient(135deg, #1A1A1A 0%, #2D1A1A 100%);
   color: white;
   padding: 3rem 1.5rem 1.5rem;
 }
@@ -809,6 +848,11 @@ a {
   font-size: 0.875rem;
 }
 
+/* ===================================
+   PAGINAS INTERNAS -bynd
+   =================================== */
+
+/* catalog page -bynd */
 .catalog-page {
   padding: 5rem 1.5rem 3rem;
   background: var(--color-background);
@@ -859,7 +903,7 @@ a {
 .search-box input:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(74, 74, 74, 0.1);
+  box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
 }
 
 .search-box::before {
@@ -887,6 +931,7 @@ a {
   gap: 2rem;
 }
 
+/* filtros panel -bynd */
 .filters-panel {
   background: var(--color-card);
   padding: 1.5rem;
@@ -958,6 +1003,9 @@ a {
   margin-bottom: 1rem;
 }
 
+/* ===================================
+   CART PAGE -bynd
+   =================================== */
 .cart-page {
   padding: 5rem 1.5rem 3rem;
   background: var(--color-background);
@@ -1058,6 +1106,7 @@ a {
   font-size: 1.25rem;
 }
 
+/* order summary -bynd */
 .order-summary {
   background: var(--color-card);
   padding: 1.5rem;
@@ -1106,7 +1155,7 @@ a {
 
 .checkout-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(74, 74, 74, 0.3);
+  box-shadow: 0 4px 12px rgba(196, 30, 58, 0.3);
 }
 
 .continue-shopping {
@@ -1118,6 +1167,7 @@ a {
   font-size: 0.875rem;
 }
 
+/* empty cart -bynd */
 .empty-cart {
   text-align: center;
   padding: 4rem 2rem;
@@ -1138,6 +1188,9 @@ a {
   margin-bottom: 1.5rem;
 }
 
+/* ===================================
+   LOGIN PAGE -bynd
+   =================================== */
 .login-page {
   padding: 5rem 1.5rem 3rem;
   background: var(--color-background);
@@ -1197,7 +1250,7 @@ a {
 .form-group input:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(74, 74, 74, 0.1);
+  box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
 }
 
 .login-btn {
@@ -1215,7 +1268,7 @@ a {
 
 .login-btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(74, 74, 74, 0.3);
+  box-shadow: 0 4px 12px rgba(196, 30, 58, 0.3);
 }
 
 .login-footer {
@@ -1239,9 +1292,9 @@ a {
 .login-benefits {
   margin-top: 2rem;
   padding: 1.5rem;
-  background: linear-gradient(135deg, rgba(74, 74, 74, 0.05) 0%, rgba(90, 90, 90, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.05) 0%, rgba(34, 139, 34, 0.05) 100%);
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(74, 74, 74, 0.1);
+  border: 1px solid rgba(196, 30, 58, 0.1);
 }
 
 .login-benefits h3 {
@@ -1269,6 +1322,9 @@ a {
   font-weight: 700;
 }
 
+/* ===================================
+   ADMIN DASHBOARD -bynd
+   =================================== */
 .admin-page {
   padding: 5rem 1.5rem 3rem;
   background: var(--color-background);
@@ -1328,7 +1384,7 @@ a {
 .metric-icon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, rgba(74, 74, 74, 0.1) 0%, rgba(90, 90, 90, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.1) 0%, rgba(34, 139, 34, 0.1) 100%);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -1376,7 +1432,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(135deg, rgba(74, 74, 74, 0.02) 0%, rgba(90, 90, 90, 0.02) 100%);
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.02) 0%, rgba(34, 139, 34, 0.02) 100%);
 }
 
 .admin-card-header h2 {
@@ -1384,6 +1440,7 @@ a {
   color: var(--color-primary);
 }
 
+/* orders table -bynd */
 .orders-table {
   width: 100%;
   border-collapse: collapse;
@@ -1420,13 +1477,13 @@ a {
 }
 
 .status-badge.completado {
-  background: rgba(90, 90, 90, 0.1);
+  background: rgba(34, 139, 34, 0.1);
   color: var(--color-success);
 }
 
 .status-badge.procesando {
-  background: rgba(106, 106, 106, 0.1);
-  color: #6A6A6A;
+  background: rgba(255, 215, 0, 0.1);
+  color: #B8860B;
 }
 
 .status-badge.pendiente {
@@ -1435,10 +1492,11 @@ a {
 }
 
 .status-badge.cancelado {
-  background: rgba(74, 74, 74, 0.1);
+  background: rgba(196, 30, 58, 0.1);
   color: var(--color-error);
 }
 
+/* alerts list -bynd */
 .alerts-list {
   padding: 0;
 }
@@ -1467,13 +1525,13 @@ a {
 }
 
 .alert-icon.critico {
-  background: rgba(74, 74, 74, 0.1);
+  background: rgba(196, 30, 58, 0.1);
   color: var(--color-error);
 }
 
 .alert-icon.advertencia {
-  background: rgba(106, 106, 106, 0.1);
-  color: #6A6A6A;
+  background: rgba(255, 215, 0, 0.1);
+  color: #B8860B;
 }
 
 .alert-content h4 {
@@ -1492,6 +1550,9 @@ a {
   margin-top: 0.25rem;
 }
 
+/* ===================================
+   TOAST NOTIFICATION -bynd
+   =================================== */
 .toast {
   position: fixed;
   bottom: 1.5rem;
@@ -1523,6 +1584,9 @@ a {
   }
 }
 
+/* ===================================
+   RESPONSIVE -bynd
+   =================================== */
 @media (max-width: 1024px) {
   .hero-container {
     grid-template-columns: 1fr;
@@ -1622,6 +1686,7 @@ a {
   }
 }
 
+/* mobile menu -bynd */
 .mobile-menu {
   display: none;
   position: absolute;
