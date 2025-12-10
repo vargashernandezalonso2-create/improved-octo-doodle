@@ -78,13 +78,16 @@ function renderizarCarrito() {
 
 // crear HTML de un item del carrito -bynd
 function crearCartItemHTML(item) {
+  // aaa parsear el precio por si viene como string -bynd
+  const precio = parseFloat(item.precio) || 0;
+  
   return `
     <div class="cart-item" data-id="${item.id}">
       <img src="${item.imagen}" alt="${item.nombre}" class="cart-item-image">
       
       <div class="cart-item-info">
         <h3>${item.nombre}</h3>
-        <p class="cart-item-price">$${item.precio.toFixed(2)} c/u</p>
+        <p class="cart-item-price">$${precio.toFixed(2)} c/u</p>
       </div>
       
       <div class="cart-item-actions">
@@ -95,7 +98,7 @@ function crearCartItemHTML(item) {
         <button class="remove-item-btn" data-id="${item.id}" title="Eliminar">X</button>
         
         <span class="cart-item-total" style="min-width: 80px; text-align: right; font-weight: 700; color: var(--color-primary);">
-          $${(item.precio * item.cantidad).toFixed(2)}
+          $${(precio * item.cantidad).toFixed(2)}
         </span>
       </div>
     </div>
